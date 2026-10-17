@@ -95,12 +95,6 @@ h2 { font-size: 24px; margin: 0 0 10px; }
 .button:hover { background: var(--accent-hover); color: var(--on-accent); }
 .fine, .soon { font-size: 14px; color: var(--faint); }
 
-/* A platform with no release yet keeps its button, gone quiet, with a line saying so beside it. */
-.button[aria-disabled="true"] {
-  background: var(--panel);
-  color: var(--faint);
-  pointer-events: none;
-}
 
 .shot { margin: 40px auto 0; max-width: 960px; }
 .shot img, .shot video {
