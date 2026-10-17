@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Time Machine isn't backing up your external drive | Stow</title>
+<meta name="description" content="If your photos or footage live on an external SSD, Time Machine probably isn't backing them up. How to check, and how to back that drive up to another one.">
+<link rel="icon" href="../icon.png">
+<link rel="stylesheet" href="../style.css">
+<script data-goatcounter="https://stow.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="../"><img src="../icon.png" alt="" width="28" height="28">Stow</a>
+  <nav>
+    <a href="../#how">How it works</a>
+    <a href="../guides/">Guides</a>
+    <a href="../buy/">Price</a>
+    <a href="../download/">Download</a>
+    <a href="../support/">Support</a>
+  </nav>
+</header>
+
+<main class="guide">
+<article>
+
+<p class="kicker">Guide · Mac</p>
+<h1>Time Machine probably isn't backing up your external drive</h1>
+<p class="lede">If your photos or footage live on an external SSD, the way most people edit from
+  one, Time Machine is likely leaving that drive out. Here's how to check, and how to back that
+  drive up to another one.</p>
+
+<h2>Check</h2>
+<p>Time Machine backs up your Mac, and leaves external drives out unless you tell it otherwise.
+  On a Mac with Time Machine set up, both external drives connected to it were on its list of
+  things not to back up.</p>
+<p>To see it for yourself, plug in your work drive, open <strong>System Settings &gt; General &gt;
+  Time Machine</strong> and click <strong>Options</strong>. If your work drive is listed under
+  <strong>Exclude from Backups</strong>, nothing on it is in your Time Machine backup.</p>
+
+<h2>Two ways to fix it</h2>
+<p><strong>Add the drive to Time Machine.</strong> Select it in that list and click the
+  <strong>&minus;</strong> button under it. Time Machine then backs it up whenever the work drive is
+  connected during a backup. That works if your Time Machine drive has room for your Mac and your
+  work together.</p>
+<p><strong>Copy the work drive to a second drive of its own.</strong> Better when the work drive is
+  big, when it travels without your Mac, or when you want a copy that's just your project folders,
+  in the same layout, that you can plug into any computer and open.</p>
+<p>The rest of this guide sets up the second way, with <a href="../">Stow</a>.</p>
+
+<h2>Back up the work drive to another drive</h2>
+<ol class="steps">
+  <li>Plug in both drives and open Stow. Click <strong>New sync</strong>.</li>
+  <li>Under <strong>From</strong>, choose the folder your work is in on the work drive. Under
+    <strong>To</strong>, choose a folder on the backup drive. Choose folders, not the drives
+    themselves: a drive also holds macOS's own hidden files, which can't be copied.</li>
+  <li>Choose <strong>Only ever add</strong>, so clearing old projects off the work drive to make
+    room never removes them from the backup.</li>
+  <li>Under <strong>When should it run?</strong>, choose <strong>Whenever the drive is plugged
+    in</strong>. Plug the backup drive in when you're done for the day and it runs.</li>
+  <li>Read the sentence at the bottom, then click <strong>Save and preview results</strong>. Stow
+    shows every file it's about to copy before anything moves. Click to run it.</li>
+</ol>
+<p>The first run copies everything, so give it time. After that each run copies only what's new or
+  changed. When Stow's menu bar item says <strong>Everything up to date</strong>, eject the
+  drive.</p>
+<p>Edited files replace their older copy on the backup, and the older copy is kept for 30 days in a
+  safety net on that drive. If a run can't finish, Stow says so and why.</p>
+
+<h2>Keep Time Machine too</h2>
+<p>Time Machine is still the right backup for your Mac itself: your apps, settings, and anything
+  you keep on the internal disk. This adds the drive it leaves out.</p>
+
+<section class="try">
+  <h2>Set it up once</h2>
+  <div class="shot demo">
+    <video class="light" autoplay muted loop playsinline width="1200" height="1000"
+      aria-label="Setting up a sync in Stow: two folders chosen, a time picked, and the whole sync said back as one sentence.">
+      <source src="../demo/stow-demo-light.webm" type="video/webm">
+      <source src="../demo/stow-demo-light.mp4" type="video/mp4">
+    </video>
+    <video class="dark" autoplay muted loop playsinline width="1200" height="1000"
+      aria-label="Setting up a sync in Stow: two folders chosen, a time picked, and the whole sync said back as one sentence.">
+      <source src="../demo/stow-demo-dark.webm" type="video/webm">
+      <source src="../demo/stow-demo-dark.mp4" type="video/mp4">
+    </video>
+  </div>
+  <p>Stow is free for 14 days with everything working, then $39 once for a licence that covers 3 computers, Mac and Windows.</p>
+  <a class="button" href="../">Try Stow</a>
+</section>
+
+</article>
+</main>
+
+<footer>
+  <p><a href="../guides/">Guides</a> ·
+    <a href="../download/">Download</a> ·
+    <a href="https://github.com/HGWingless/stow/releases">Changelog</a> ·
+    <a href="../privacy/">Privacy</a> ·
+    <a href="../support/">Support</a></p>
+  <p>Stow uses <a href="https://rclone.org">rclone</a>, open-source software under the
+    <a href="https://github.com/rclone/rclone/blob/master/COPYING">MIT licence</a>.</p>
+  <p>© 2026 Josh Parmely</p>
+</footer>
+
+<script>
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    for (const v of document.querySelectorAll("video")) {
+      v.removeAttribute("autoplay");
+      v.pause();
+      v.controls = true;
+    }
+  }
+</script>
+</body>
+</html>

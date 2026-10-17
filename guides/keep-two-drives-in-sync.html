@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keep two external drives the same | Stow</title>
+<meta name="description" content="Your archive is on one drive and its copy on another. How to keep the copy matching the original, including what you cull and reorganise, without dragging folders across.">
+<link rel="icon" href="../icon.png">
+<link rel="stylesheet" href="../style.css">
+<script data-goatcounter="https://stow.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="../"><img src="../icon.png" alt="" width="28" height="28">Stow</a>
+  <nav>
+    <a href="../#how">How it works</a>
+    <a href="../guides/">Guides</a>
+    <a href="../buy/">Price</a>
+    <a href="../download/">Download</a>
+    <a href="../support/">Support</a>
+  </nav>
+</header>
+
+<main class="guide">
+<article>
+
+<p class="kicker">Guide · Mac</p>
+<h1>Keep two external drives the same</h1>
+<p class="lede">Your photos or footage live on one drive, and a second drive is meant to be its
+  copy. Dragging folders across leaves the copy missing your newest work, and still holding
+  everything you've culled or moved since. Here's how to make the copy match the original every
+  time you plug both in.</p>
+
+<h2>First, name the drives differently</h2>
+<p>Drives bought as a pair usually have the same name, like <em>T7</em> or <em>Untitled</em>. When
+  two drives share a name, your Mac calls whichever you plug in first <em>T7</em> and the other
+  <em>T7 1</em>, so the names swap whenever you plug them in the other way round. Stow keeps track
+  of which drive is which either way, but you'll want to tell them apart at a glance.</p>
+<p>Give each drive a name that says what it is. In Finder, Control-click the drive in the sidebar,
+  choose <strong>Rename</strong>, and call them something like <em>Archive</em> and <em>Archive
+  Copy</em>.</p>
+
+<h2>Setting it up</h2>
+<p>This uses <a href="../">Stow</a>. Plug in both drives first.</p>
+<ol class="steps">
+  <li>Open Stow and click <strong>New sync</strong>.</li>
+  <li>Under <strong>From</strong>, choose your work folder on the original drive. Under
+    <strong>To</strong>, choose (or make) a folder on the copy. Choose folders, not the drives
+    themselves: a drive also holds macOS's own hidden files, which can't be copied.</li>
+  <li>Choose the first option, which reads like <strong>Make Photos on Archive Copy match Photos
+    on Archive</strong>. New and changed files are copied across, and anything you delete from the
+    original is removed from the copy too.</li>
+  <li>Under <strong>When should it run?</strong>, choose <strong>Whenever Photos on Archive Copy
+    is plugged in</strong>. It runs once both drives are connected, whichever goes in last.</li>
+  <li>Read the sentence at the bottom, then click <strong>Save and preview results</strong>. Stow
+    lists every file it would copy and every file it would remove before anything moves. If the
+    copy has drifted a long way from the original, read the removals carefully. Then click to run
+    it.</li>
+</ol>
+<p>The first run can take a while, depending on how far apart the drives are. After that, each run
+  only copies and removes what's changed since the last one. When Stow's menu bar item says
+  <strong>Everything up to date</strong>, eject both drives.</p>
+
+<h2>When you delete something by mistake</h2>
+<p>A copy that follows the original also follows its mistakes. Delete a folder from the original
+  and the next run removes it from the copy too. Stow doesn't throw it away, though. Anything a run
+  removes or replaces goes into a safety net, a folder called <em>_kept</em> inside the copy, for
+  30 days. You can put it back from inside Stow.</p>
+<p>If a run would remove more than half of what's on the copy, Stow stops before removing anything.
+  That's what you'd see if the original drive came up empty or the wrong folder got chosen. The
+  sync shows <strong>Safety stop</strong> and how much would have gone. Click <strong>Try
+  again</strong> to see the list. If you meant it, click <strong>Yes, I'm sure. Go
+  ahead</strong>.</p>
+
+<h2>If the copy should keep everything</h2>
+<p>Some people want the second drive to hold everything that was ever on the first, culls and all.
+  For that, choose <strong>Only ever add</strong> instead. Nothing is ever removed from the copy,
+  so it grows by whatever you add and keeps whatever you delete.</p>
+
+<h2>If you add work to both drives</h2>
+<p>If the second drive travels with you and you import onto it on the road, choose <strong>Keep both
+  in step</strong> instead. When both are plugged in, anything new or changed on either drive is
+  copied to the other. If the same file was changed on both, Stow keeps both versions and puts them
+  in <strong>Needs review</strong> for you to choose.</p>
+
+<h2>Things worth knowing</h2>
+<ul>
+  <li><strong>A changed file is copied whole.</strong> Re-export a 20 GB video and all 20 GB is
+    copied again. Stow doesn't copy only the changed parts of a file.</li>
+  <li><strong>Two drives in one room are one disaster away from none.</strong> A fire or a theft
+    takes both. Keep a third copy somewhere else, or keep the copy somewhere else between runs.</li>
+  <li><strong>Check that it opens.</strong> Every so often, open a few photos and clips straight
+    from the copy. A backup you've never opened is a guess.</li>
+</ul>
+
+<section class="try">
+  <h2>Set it up once</h2>
+  <div class="shot demo">
+    <video class="light" autoplay muted loop playsinline width="1200" height="1000"
+      aria-label="Setting up a sync in Stow: two folders chosen, a time picked, and the whole sync said back as one sentence.">
+      <source src="../demo/stow-demo-light.webm" type="video/webm">
+      <source src="../demo/stow-demo-light.mp4" type="video/mp4">
+    </video>
+    <video class="dark" autoplay muted loop playsinline width="1200" height="1000"
+      aria-label="Setting up a sync in Stow: two folders chosen, a time picked, and the whole sync said back as one sentence.">
+      <source src="../demo/stow-demo-dark.webm" type="video/webm">
+      <source src="../demo/stow-demo-dark.mp4" type="video/mp4">
+    </video>
+  </div>
+  <p>Stow is free for 14 days with everything working, then $39 once for a licence that covers 3 computers, Mac and Windows.</p>
+  <a class="button" href="../">Try Stow</a>
+</section>
+
+</article>
+</main>
+
+<footer>
+  <p><a href="../guides/">Guides</a> ·
+    <a href="../download/">Download</a> ·
+    <a href="https://github.com/HGWingless/stow/releases">Changelog</a> ·
+    <a href="../privacy/">Privacy</a> ·
+    <a href="../support/">Support</a></p>
+  <p>Stow uses <a href="https://rclone.org">rclone</a>, open-source software under the
+    <a href="https://github.com/rclone/rclone/blob/master/COPYING">MIT licence</a>.</p>
+  <p>© 2026 Josh Parmely</p>
+</footer>
+
+<script>
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    for (const v of document.querySelectorAll("video")) {
+      v.removeAttribute("autoplay");
+      v.pause();
+      v.controls = true;
+    }
+  }
+</script>
+</body>
+</html>

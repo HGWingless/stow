@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stow: backups in plain English</title>
+<meta name="description" content="Stow keeps two folders the same, says what it will do in a sentence before it does it, and keeps everything it replaces or removes for 30 days. For Mac and Windows.">
+<meta property="og:title" content="Stow: backups in plain English">
+<meta property="og:description" content="Keep two folders the same. See every change before it happens. Get back anything for 30 days.">
+<meta property="og:image" content="https://hgwingless.github.io/stow/screens/new-sync.png">
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="style.css">
+<script data-goatcounter="https://stow.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="./"><img src="icon.png" alt="" width="28" height="28">Stow</a>
+  <nav>
+    <a href="#how">How it works</a>
+    <a href="guides/">Guides</a>
+    <a href="buy/">Price</a>
+    <a href="download/">Download</a>
+    <a href="support/">Support</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <h1>Backups in plain English.<br>Nothing gets lost.</h1>
+  <p class="lede">Stow keeps a folder on your computer and a folder on another drive the same. You
+    set it up by answering a few questions, and it tells you what it will do in a sentence before
+    it does it.</p>
+  <div class="downloads">
+    <a class="button" href="https://github.com/HGWingless/stow/releases/download/v0.1.0/Stow_0.1.0_aarch64.dmg">Download for Mac (Apple silicon)</a>
+    <span class="button" aria-disabled="true">Download for Windows</span>
+    <p class="soon">Windows is coming soon.</p>
+    <p class="fine">14 days free, with everything working. Then $39 once, for 3 computers. 30-day refund, no questions asked.</p>
+  </div>
+  <figure class="shot demo">
+    <!-- SPL-94: the real app setting up a sync, one per theme. -->
+    <video class="light" autoplay muted loop playsinline width="1200" height="1000"
+      aria-label="Setting up a sync in Stow: two folders chosen, a time picked, and the whole sync said back as one sentence before anything moves.">
+      <source src="demo/stow-demo-light.webm" type="video/webm">
+      <source src="demo/stow-demo-light.mp4" type="video/mp4">
+    </video>
+    <video class="dark" autoplay muted loop playsinline width="1200" height="1000"
+      aria-label="Setting up a sync in Stow: two folders chosen, a time picked, and the whole sync said back as one sentence before anything moves.">
+      <source src="demo/stow-demo-dark.webm" type="video/webm">
+      <source src="demo/stow-demo-dark.mp4" type="video/mp4">
+    </video>
+    <figcaption class="sentence">Every day at 2:00 AM, Stow makes Photos on Backup SSD match Photos
+      on this Mac. Anything it replaces or removes goes to the safety net for 30 days.</figcaption>
+  </figure>
+</section>
+
+<section class="how" id="how">
+  <h2>How it works</h2>
+  <ol class="steps-grid">
+    <li>
+      <h3>Choose two folders.</h3>
+      <p>One on this computer, one on an external drive, a second drive, or a network share you've
+        already connected.</p>
+    </li>
+    <li>
+      <h3>Say what should happen.</h3>
+      <p>Make it match, only ever add, or keep both in step. Then pick when: when you click, on a
+        schedule, or whenever the drive is plugged in. Stow says it all back in one sentence.</p>
+    </li>
+    <li>
+      <h3>Check the preview, then let it run.</h3>
+      <p>The first time, you see every file it would copy, replace or remove, and you can untick any
+        of them. After that it runs on its own.</p>
+    </li>
+  </ol>
+</section>
+
+<section class="rules">
+  <article>
+    <h3>Say it in a sentence.</h3>
+    <p>No flags, no modes with odd names. Each choice says what happens to a file you delete.</p>
+  </article>
+  <article>
+    <h3>See it before it happens.</h3>
+    <p>The first run lists every file it would copy, replace or remove, in groups you can untick.
+      Anything you untick stays where it is.</p>
+  </article>
+  <article>
+    <h3>Nothing is gone for good.</h3>
+    <p>Every file Stow replaces or removes goes into a safety net on the same drive first, kept for
+      30 days. Put any of them back from inside the app. (Holds while the safety net is on, which
+      is the default.)</p>
+  </article>
+  <article>
+    <h3>Runs on its own.</h3>
+    <p>Every so many minutes or hours, at a set time every day, every few days or once a week, or
+      whenever a drive is plugged in. A schedule never stops to ask a question.</p>
+  </article>
+  <article>
+    <h3>Says so when it can't.</h3>
+    <p>If a run fails, Stow tells you what went wrong and what to do about it.</p>
+  </article>
+  <article>
+    <h3>Two-way when you need it.</h3>
+    <p>When the same file changes in both places, you choose ahead of time what happens. The
+      default keeps both copies.</p>
+  </article>
+  <article>
+    <h3>Won't copy an empty folder over your backup.</h3>
+    <p>If a source suddenly reads as empty or can't be opened, Stow stops instead of removing
+      everything on the other side.</p>
+  </article>
+  <article>
+    <h3>Filters.</h3>
+    <p>Leave out files or folders by name.</p>
+  </article>
+  <article>
+    <h3>Run history</h3>
+    <p>In plain language, and a menu bar (Mac) or notification-area (Windows) icon showing what's
+      happening.</p>
+  </article>
+</section>
+
+<section class="feature">
+  <figure class="shot">
+    <picture>
+      <source srcset="screens/preview-dark.png" media="(prefers-color-scheme: dark)">
+      <img src="screens/preview.png" width="1200" height="1000" loading="lazy"
+        alt="The first run's preview: files grouped as copied, replaced and removed, each group with a tick box.">
+    </picture>
+  </figure>
+  <div>
+    <h2>Built so a mistake can be undone</h2>
+    <ul class="ticks">
+      <li>The safety net is on by default and keeps replaced and removed files for 30 days, on the
+        same drive, with the date and the reason. You can see how much space it's using at any
+        time.</li>
+      <li>The first run is always previewed.</li>
+      <li>Stow refuses to run from a folder it can't read, rather than treating it as empty.</li>
+      <li>The part that moves your files is a long-established open-source copier, not something
+        new.</li>
+      <li>Your files never leave your drives. Stow has no account and no cloud of its own.</li>
+      <li>Signed and notarized by Apple on Mac.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="why">
+  <h2>Why Stow</h2>
+  <ul class="ticks">
+    <li><strong>Set up once, in words you understand.</strong> Two folders, what should happen, and
+      when. Stow says it back in one sentence.</li>
+    <li><strong>Mistakes can be undone.</strong> Replaced and removed files are kept for 30 days by
+      default.</li>
+    <li><strong>It tells you when something's wrong,</strong> instead of quietly stopping.</li>
+    <li><strong>One price, both platforms.</strong> $39 once covers 3 computers, any mix of Mac and
+      Windows. No subscription.</li>
+    <li><strong>Made for people with a drive and a folder they care about:</strong> photographers,
+      video editors, small studios, and anyone setting up a parent's computer.</li>
+  </ul>
+</section>
+
+<section class="fit">
+  <h2>What it works with</h2>
+  <ul>
+    <li>Folders on your computer, external drives, and network shares you've already connected.</li>
+    <li>Mac with Apple silicon (M1 or later) and Windows 11. Intel Macs are not supported in 1.0.</li>
+    <li>Not yet: cloud services like Google Drive or Dropbox (planned).</li>
+    <li>A copy moves the whole file. If you edit one line of a 4 GB video, Stow copies all 4 GB.</li>
+    <li>Stow takes about 96 MB once installed, most of it the file-copying engine that comes inside.</li>
+  </ul>
+</section>
+
+<section class="price" id="price">
+  <h2>$39, once.</h2>
+  <p>One licence covers three of your computers, Mac or Windows. Every 1.x update is included.</p>
+  <p>Try it for 14 days first with nothing switched off. If you don't buy, your files and their
+    history stay exactly where they are, and syncs stop running until you do.</p>
+  <p>Changed your mind after buying? Full refund within 30 days, no questions asked.</p>
+  <div class="buy">
+    <a class="button" data-buy href="https://wingless-enterprises.lemonsqueezy.com/checkout/buy/80c4538e-4181-4d3f-bd18-79e48f971d4a">Buy Stow</a>
+    <p class="fine" data-buy-other>Or buy for <a data-platform="mac" href="https://wingless-enterprises.lemonsqueezy.com/checkout/buy/80c4538e-4181-4d3f-bd18-79e48f971d4a?checkout%5Bcustom%5D%5Bplatform%5D=mac">Mac</a>
+      or <a data-platform="windows" href="https://wingless-enterprises.lemonsqueezy.com/checkout/buy/80c4538e-4181-4d3f-bd18-79e48f971d4a?checkout%5Bcustom%5D%5Bplatform%5D=windows">Windows</a></p>
+  </div>
+</section>
+
+<section class="faq">
+  <h2>Questions</h2>
+  <details>
+    <summary>Is this a backup or a sync?</summary>
+    <p>Both, depending on what you pick. "Make it match" and "Only ever add" are one-way backups.
+      "Keep both in step" is a two-way sync.</p>
+  </details>
+  <details>
+    <summary>What happens if I delete something by mistake?</summary>
+    <p>If the backup already removed it too, it's in the safety net for 30 days. Open the sync,
+      find the file, and put it back.</p>
+  </details>
+  <details>
+    <summary>Does it back up my whole computer?</summary>
+    <p>No. Stow copies folders you choose. For a full system backup, keep Time Machine or File
+      History, or use a cloning tool.</p>
+  </details>
+  <details>
+    <summary>Does it work with Google Drive, Dropbox or S3?</summary>
+    <p>Not in 1.0.</p>
+  </details>
+  <details>
+    <summary>Does Stow need to be open?</summary>
+    <p>No. It lives in the menu bar (Mac) or the notification area (Windows) and runs syncs with
+      the window closed. If you quit it, nothing runs, and it tells you what was missed next
+      time.</p>
+  </details>
+  <details>
+    <summary>What happens when the trial ends?</summary>
+    <p>Syncs stop running. Your files, the safety net and the history stay where they are and stay
+      readable.</p>
+  </details>
+  <details>
+    <summary>What if the licence server is down?</summary>
+    <p>A licensed copy that can't be checked keeps working.</p>
+  </details>
+  <details>
+    <summary>Do I need to know anything technical?</summary>
+    <p>No. Stow uses the open-source rclone underneath, but you never have to touch it.</p>
+  </details>
+  <details>
+    <summary>Does it run on Intel Macs?</summary>
+    <p>No. Stow 1.0 needs a Mac with Apple silicon (M1 or later).</p>
+  </details>
+  <details>
+    <summary>Can I get a refund?</summary>
+    <p>Yes. Within 30 days of buying, email
+      <a href="mailto:support@winglessenterprises.com">support@winglessenterprises.com</a> for a
+      full refund, no questions asked.</p>
+  </details>
+  <details>
+    <summary>Is my data sent anywhere?</summary>
+    <p>No. See <a href="privacy/">Privacy</a>.</p>
+  </details>
+  <details>
+    <summary>Does it copy only the changed part of a big file?</summary>
+    <p>No. A changed file is copied whole.</p>
+  </details>
+</section>
+
+</main>
+
+<footer>
+  <p><a href="guides/">Guides</a> ·
+    <a href="download/">Download</a> ·
+    <a href="https://github.com/HGWingless/stow/releases">Changelog</a> ·
+    <a href="privacy/">Privacy</a> ·
+    <a href="support/">Support</a></p>
+  <p>Stow uses <a href="https://rclone.org">rclone</a>, open-source software under the
+    <a href="https://github.com/rclone/rclone/blob/master/COPYING">MIT licence</a>.</p>
+  <p>© 2026 Josh Parmely</p>
+</footer>
+
+<script>
+  // Someone who asked for less motion gets the demo paused, with controls to play it.
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    for (const v of document.querySelectorAll("video")) {
+      v.removeAttribute("autoplay");
+      v.pause();
+      v.controls = true;
+    }
+  }
+</script>
+<script>
+  // One Buy button (SPL-125). It buys for the platform this browser is on, and the line under it
+  // buys for the other. Lemon Squeezy records the platform and where the visitor came from.
+  (() => {
+    const CHECKOUT = "https://wingless-enterprises.lemonsqueezy.com/checkout/buy/80c4538e-4181-4d3f-bd18-79e48f971d4a";
+    const NAMES = { mac: "Mac", windows: "Windows" };
+    const ua = navigator.userAgent;
+    // An iPad asks for the desktop site as a Mac, so a touch screen rules a Mac out.
+    const os = /Windows/.test(ua) ? "windows"
+      : /Macintosh/.test(ua) && navigator.maxTouchPoints < 2 ? "mac" : null;
+
+    // Remember utm_source for the visit, so arriving on one page and buying on another still counts.
+    let source = new URLSearchParams(location.search).get("utm_source");
+    try {
+      if (source) sessionStorage.setItem("utm_source", source);
+      else source = sessionStorage.getItem("utm_source");
+    } catch {}
+
+    const checkout = (platform) => {
+      const q = new URLSearchParams();
+      if (platform) q.set("checkout[custom][platform]", platform);
+      if (source) q.set("checkout[custom][source]", source);
+      return q.size ? `${CHECKOUT}?${q}` : CHECKOUT;
+    };
+
+    for (const buy of document.querySelectorAll(".buy")) {
+      const button = buy.querySelector("[data-buy]");
+      const other = buy.querySelector("[data-buy-other]");
+      button.href = checkout(os);
+      for (const a of other.querySelectorAll("[data-platform]")) a.href = checkout(a.dataset.platform);
+      if (!os) continue;
+      const them = os === "mac" ? "windows" : "mac";
+      button.textContent = `Buy Stow for ${NAMES[os]}`;
+      other.innerHTML = "";
+      other.append(`${os === "mac" ? "On Windows?" : "On a Mac?"} `);
+      const link = document.createElement("a");
+      link.href = checkout(them);
+      link.textContent = `Buy for ${NAMES[them]}`;
+      other.append(link);
+    }
+  })();
+</script>
+
+</body>
+</html>

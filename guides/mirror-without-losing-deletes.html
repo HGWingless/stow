@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mirror your photos without losing what you delete by mistake | Stow</title>
+<meta name="description" content="A backup that matches your library also copies your mistakes. How to keep a mirror of your shoots on a backup drive, and get back a photo or a whole shoot you deleted by mistake.">
+<link rel="icon" href="../icon.png">
+<link rel="stylesheet" href="../style.css">
+<script data-goatcounter="https://stow.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="../"><img src="../icon.png" alt="" width="28" height="28">Stow</a>
+  <nav>
+    <a href="../#how">How it works</a>
+    <a href="../guides/">Guides</a>
+    <a href="../buy/">Price</a>
+    <a href="../download/">Download</a>
+    <a href="../support/">Support</a>
+  </nav>
+</header>
+
+<main class="guide">
+<article>
+
+<p class="kicker">Guide · Mac and Windows 11</p>
+<h1>Mirror your photos without losing what you delete by mistake</h1>
+<p class="lede">You cull hard, so you want a backup that matches your shoots folder, not one that
+  keeps every frame you've rejected. But a backup that matches also copies your mistakes. Delete the
+  wrong shoot, and the next time the backup drive goes in, it's gone from there too. Here's how to
+  keep a matching backup and still get back what you deleted by mistake.</p>
+
+<h2>Setting it up</h2>
+<p>This uses <a href="../">Stow</a>. Plug in your backup drive first.</p>
+<ol class="steps">
+  <li>Open Stow and click <strong>New sync</strong>.</li>
+  <li>Under <strong>From</strong>, choose your shoots folder. Under <strong>To</strong>, choose (or
+    make) a folder on the backup drive. Choose folders, not the drives themselves: a drive also
+    holds the system's own hidden files, which can't be copied.</li>
+  <li>Choose the first option, which reads like <strong>Make Shoots on Backup match Shoots on this
+    Mac</strong> (on Windows, <strong>&hellip;on this PC</strong>). New and changed files are copied, and anything you delete from your shoots folder
+    is removed from the backup too.</li>
+  <li>Under <strong>When should it run?</strong>, choose <strong>Whenever Shoots on Backup is
+    plugged in</strong>.</li>
+  <li>Click <strong>More options&hellip;</strong>. The <strong>Safety net</strong> is already on:
+    anything a run removes or replaces goes into a dated folder on the backup drive instead of being
+    deleted. Next to it, click <strong>Change</strong> and set how long to keep things and how much
+    space to give them. Make the space bigger than your biggest shoot. When it fills up, the oldest
+    go first, even if their days aren't up.</li>
+  <li>Click <strong>Save and preview results</strong>. Stow lists every file it would copy before
+    anything moves. Click to run it.</li>
+</ol>
+
+<h2>Getting a photo back</h2>
+<ol class="steps">
+  <li>In Stow, click <strong>Safety net</strong> in the sidebar. If you have more than one sync,
+    choose your backup drive at the top.</li>
+  <li>Search for the file's name, or the name of the shoot's folder.</li>
+  <li>Click the file. Stow lists every copy it has kept, when, and why, like <em>Removed, because
+    it was gone from Shoots on this Mac</em> (or <em>on this PC</em> on Windows).</li>
+  <li>Click <strong>Put it back</strong>. The photo goes back where it was in your shoots folder, and
+    the next run copies it to the backup again.</li>
+</ol>
+<p>If a file with that name is already there, nothing is overwritten. The kept copy comes back
+  beside it with the date it was kept in its name, like <em>IMG_2005 (kept 2026-10-09
+  20-06).CR3</em>.</p>
+
+<h2>Getting a whole shoot back</h2>
+<p><strong>Put it back</strong> works one file at a time. For a whole folder, use Finder or File
+  Explorer instead:</p>
+<ol class="steps">
+  <li>On the safety net screen, click <strong>Show the safety net in Finder</strong> (<strong>in
+    File Explorer</strong> on Windows). It opens your folder on the backup drive, with a folder called
+    <em>_kept</em> selected.</li>
+  <li>Open <em>_kept</em>. Every run that removed or replaced something has its own folder, named
+    for when it ran, like <em>2026-10-10T03-06-33Z</em>. That time is in UTC, not your local time,
+    so a run late in your day (or early, depending on where you are) can carry a different date. Open the first one after you deleted the shoot.</li>
+  <li>Inside, the shoot's folder is just as it was. Drag it back into your shoots folder.</li>
+</ol>
+<p>The next run copies the shoot to the backup again.</p>
+
+<h2>When a run would remove too much</h2>
+<p>If a run would remove more than half of what's on the backup, Stow stops before removing
+  anything. You'd see that if the drive holding your shoots came up empty, or you'd moved the shoots
+  folder somewhere else. The sync shows <strong>Safety stop</strong> and how much would have gone.
+  Click <strong>Try again</strong> to see the list. If you meant it, click <strong>Yes, I'm sure. Go
+  ahead</strong>.</p>
+
+<h2>Things worth knowing</h2>
+<ul>
+  <li><strong>The safety net only lasts so long.</strong> Once a removed shoot has been in the safety
+    net longer than you chose, it's cleared, and from then on it's gone from both drives.</li>
+  <li><strong>It's kept on the backup drive.</strong> The safety net is for your mistakes, not the
+    drive's. If the backup drive dies or is stolen, its safety net goes with it. Keep another copy
+    somewhere else.</li>
+  <li><strong>Replaced files are kept too.</strong> Save over a JPEG export and the next run puts
+    the old version in the safety net, where <strong>Put it back</strong> works the same way.</li>
+</ul>
+
+<section class="try">
+  <h2>Set it up once</h2>
+  <div class="shot demo">
+    <video class="light" autoplay muted loop playsinline width="1200" height="1000"
+      aria-label="Setting up a sync in Stow: two folders chosen, a time picked, and the whole sync said back as one sentence.">
+      <source src="../demo/stow-demo-light.webm" type="video/webm">
+      <source src="../demo/stow-demo-light.mp4" type="video/mp4">
+    </video>
+    <video class="dark" autoplay muted loop playsinline width="1200" height="1000"
+      aria-label="Setting up a sync in Stow: two folders chosen, a time picked, and the whole sync said back as one sentence.">
+      <source src="../demo/stow-demo-dark.webm" type="video/webm">
+      <source src="../demo/stow-demo-dark.mp4" type="video/mp4">
+    </video>
+  </div>
+  <p>Stow is free for 14 days with everything working, then $39 once for a licence that covers 3 computers, Mac and Windows.</p>
+  <a class="button" href="../">Try Stow</a>
+</section>
+
+</article>
+</main>
+
+<footer>
+  <p><a href="../guides/">Guides</a> ·
+    <a href="../download/">Download</a> ·
+    <a href="https://github.com/HGWingless/stow/releases">Changelog</a> ·
+    <a href="../privacy/">Privacy</a> ·
+    <a href="../support/">Support</a></p>
+  <p>Stow uses <a href="https://rclone.org">rclone</a>, open-source software under the
+    <a href="https://github.com/rclone/rclone/blob/master/COPYING">MIT licence</a>.</p>
+  <p>© 2026 Josh Parmely</p>
+</footer>
+
+<script>
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    for (const v of document.querySelectorAll("video")) {
+      v.removeAttribute("autoplay");
+      v.pause();
+      v.controls = true;
+    }
+  }
+</script>
+</body>
+</html>

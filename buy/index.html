@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buy | Stow</title>
+<meta name="description" content="Stow is $39 once, for three computers, Mac and Windows. 14-day free trial and a 30-day refund, no questions asked.">
+<link rel="icon" href="../icon.png">
+<link rel="stylesheet" href="../style.css">
+<script data-goatcounter="https://stow.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="../"><img src="../icon.png" alt="" width="28" height="28">Stow</a>
+  <nav>
+    <a href="../#how">How it works</a>
+    <a href="../guides/">Guides</a>
+    <a href="../buy/">Price</a>
+    <a href="../download/">Download</a>
+    <a href="../support/">Support</a>
+  </nav>
+</header>
+
+<main class="page">
+<h1>Buy Stow</h1>
+
+<section class="price">
+  <h2>$39, once. Three computers. Mac and Windows.</h2>
+  <p>Try it for 14 days first with nothing switched off.</p>
+  <div class="buy">
+    <a class="button" data-buy href="https://wingless-enterprises.lemonsqueezy.com/checkout/buy/80c4538e-4181-4d3f-bd18-79e48f971d4a">Buy Stow</a>
+    <p class="fine" data-buy-other>Or buy for <a data-platform="mac" href="https://wingless-enterprises.lemonsqueezy.com/checkout/buy/80c4538e-4181-4d3f-bd18-79e48f971d4a?checkout%5Bcustom%5D%5Bplatform%5D=mac">Mac</a>
+      or <a data-platform="windows" href="https://wingless-enterprises.lemonsqueezy.com/checkout/buy/80c4538e-4181-4d3f-bd18-79e48f971d4a?checkout%5Bcustom%5D%5Bplatform%5D=windows">Windows</a></p>
+  </div>
+</section>
+
+<ul>
+  <li>One licence works on up to 3 of your computers, in any mix of Mac and Windows.</li>
+  <li>Every 1.x update included. A future 2.0 would be a paid upgrade.</li>
+  <li>Secure checkout by Lemon Squeezy. Your licence key arrives by email right after.</li>
+  <li>To activate: open Stow, choose <strong>Licence</strong>, paste your key and click
+    <strong>Use this key</strong>.</li>
+  <li>Moving to a new computer: on the old one, open <strong>Licence</strong> and choose
+    <strong>Remove from this computer</strong>. Then enter the key on the new one.</li>
+  <li><strong>Refunds:</strong> 30 days, no questions asked. Email
+    <a href="mailto:support@winglessenterprises.com">support@winglessenterprises.com</a> with your
+    order number.</li>
+  <li>Taxes: Lemon Squeezy adds VAT or sales tax where required.</li>
+</ul>
+</main>
+
+<footer>
+  <p><a href="../guides/">Guides</a> ·
+    <a href="../download/">Download</a> ·
+    <a href="https://github.com/HGWingless/stow/releases">Changelog</a> ·
+    <a href="../privacy/">Privacy</a> ·
+    <a href="../support/">Support</a></p>
+  <p>Stow uses <a href="https://rclone.org">rclone</a>, open-source software under the
+    <a href="https://github.com/rclone/rclone/blob/master/COPYING">MIT licence</a>.</p>
+  <p>© 2026 Josh Parmely</p>
+</footer>
+<script>
+  // One Buy button (SPL-125). It buys for the platform this browser is on, and the line under it
+  // buys for the other. Lemon Squeezy records the platform and where the visitor came from.
+  (() => {
+    const CHECKOUT = "https://wingless-enterprises.lemonsqueezy.com/checkout/buy/80c4538e-4181-4d3f-bd18-79e48f971d4a";
+    const NAMES = { mac: "Mac", windows: "Windows" };
+    const ua = navigator.userAgent;
+    // An iPad asks for the desktop site as a Mac, so a touch screen rules a Mac out.
+    const os = /Windows/.test(ua) ? "windows"
+      : /Macintosh/.test(ua) && navigator.maxTouchPoints < 2 ? "mac" : null;
+
+    // Remember utm_source for the visit, so arriving on one page and buying on another still counts.
+    let source = new URLSearchParams(location.search).get("utm_source");
+    try {
+      if (source) sessionStorage.setItem("utm_source", source);
+      else source = sessionStorage.getItem("utm_source");
+    } catch {}
+
+    const checkout = (platform) => {
+      const q = new URLSearchParams();
+      if (platform) q.set("checkout[custom][platform]", platform);
+      if (source) q.set("checkout[custom][source]", source);
+      return q.size ? `${CHECKOUT}?${q}` : CHECKOUT;
+    };
+
+    for (const buy of document.querySelectorAll(".buy")) {
+      const button = buy.querySelector("[data-buy]");
+      const other = buy.querySelector("[data-buy-other]");
+      button.href = checkout(os);
+      for (const a of other.querySelectorAll("[data-platform]")) a.href = checkout(a.dataset.platform);
+      if (!os) continue;
+      const them = os === "mac" ? "windows" : "mac";
+      button.textContent = `Buy Stow for ${NAMES[os]}`;
+      other.innerHTML = "";
+      other.append(`${os === "mac" ? "On Windows?" : "On a Mac?"} `);
+      const link = document.createElement("a");
+      link.href = checkout(them);
+      link.textContent = `Buy for ${NAMES[them]}`;
+      other.append(link);
+    }
+  })();
+</script>
+
+</body>
+</html>

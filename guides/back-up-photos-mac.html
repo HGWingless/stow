@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up photos and video every time you plug in a drive (Mac) | Stow</title>
+<meta name="description" content="For photographers and video editors: plug in your backup drive when you're done, and have the day's work copied to it without dragging a thing.">
+<link rel="icon" href="../icon.png">
+<link rel="stylesheet" href="../style.css">
+<script data-goatcounter="https://stow.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="../"><img src="../icon.png" alt="" width="28" height="28">Stow</a>
+  <nav>
+    <a href="../#how">How it works</a>
+    <a href="../guides/">Guides</a>
+    <a href="../buy/">Price</a>
+    <a href="../download/">Download</a>
+    <a href="../support/">Support</a>
+  </nav>
+</header>
+
+<main class="guide">
+<article>
+
+<p class="kicker">Guide · Mac</p>
+<h1>Back up your photos and video every time you plug in the drive</h1>
+<p class="lede">You finish a shoot or an edit, plug in the backup drive, and drag folders across,
+  hoping you got all of them and didn't overwrite anything. Here's how to make plugging the drive in
+  the whole job.</p>
+
+<h2>What you're setting up</h2>
+<p>One rule: <em>whenever this drive is plugged in, copy anything new or changed in my work folder
+  onto it, and never remove anything from it.</em> You set it up once. After that you plug the
+  drive in, wait for it to finish, and eject.</p>
+<p>You'll need your work in a folder (or a few) on the Mac, and an external drive with room for all
+  of it. This works with any folder of files: camera cards you've imported, Lightroom Classic or
+  Capture One folders, video projects and their media, exports.</p>
+
+<h2>Setting it up</h2>
+<p>This uses <a href="../">Stow</a>. The steps take about two minutes.</p>
+<ol class="steps">
+  <li>Plug in the backup drive and open Stow. Click <strong>New sync</strong>.</li>
+  <li>Under <strong>From</strong>, choose your work folder. Under <strong>To</strong>, choose (or
+    make) a folder on the drive.</li>
+  <li>Choose <strong>Only ever add</strong>. New and changed files get copied, and nothing on the
+    drive is ever removed, so culling rejects or clearing space on your Mac never touches the
+    backup.</li>
+  <li>Under <strong>When should it run?</strong>, choose <strong>Whenever the drive is plugged
+    in</strong>. It runs once each time you connect the drive, not again while it stays
+    connected.</li>
+  <li>Read the sentence at the bottom. It says what will happen, in full, before you save. Then click
+    <strong>Save and preview results</strong>.</li>
+  <li>The first time, Stow shows every file it's about to copy, so you can check you picked the
+    right folders. Click to run it.</li>
+  <li>When Stow asks, let it start when you log in. It can only notice the drive while it's
+    running.</li>
+</ol>
+<p>The first run copies everything, so give it time. Every run after that copies only what's new
+  or changed since the last one.</p>
+
+<h2>Each time you're done</h2>
+<ol class="steps">
+  <li>Quit your editing app if its catalog, library or project file is in the folder. Those are
+    databases that change while the app is open. The photos and footage themselves are fine to copy
+    at any time.</li>
+  <li>Plug in the drive. The run starts on its own.</li>
+  <li>Click Stow in the menu bar. While it's working it says <strong>Running</strong> with a
+    percentage. When it says <strong>Everything up to date</strong>, eject the drive.</li>
+</ol>
+<p>If a run can't finish, because the drive is full or a folder couldn't be read, Stow tells you
+  and says why, rather than leaving a backup that's quietly missing things. If you unplug the drive
+  partway through, that run is marked as not finished, nothing is written to your Mac in its place,
+  and the next plug-in picks up what's left.</p>
+
+<h2>Things worth knowing</h2>
+<ul>
+  <li><strong>Edited files replace their old copy, but the old copy is kept.</strong> When a changed
+    file is copied over its older version on the drive, the older one goes into a safety net on the
+    drive for 30 days. You can put it back from inside Stow.</li>
+  <li><strong>A changed file is copied whole.</strong> Re-export a 20 GB video and all 20 GB is
+    copied again. Stow doesn't copy only the changed parts of a file.</li>
+  <li><strong>Two drives are better than one.</strong> A backup on a drive that lives next to your
+    computer doesn't survive a fire or a theft. Set up a second sync to a second drive the same way,
+    and keep that one somewhere else.</li>
+  <li><strong>Check that it opens.</strong> Every so often, open a few photos and clips straight
+    from the drive. A backup you've never opened is a guess.</li>
+</ul>
+
+<section class="try">
+  <h2>Set it up once</h2>
+  <div class="shot demo">
+    <video class="light" autoplay muted loop playsinline width="1200" height="1000"
+      aria-label="Setting up a sync in Stow: two folders chosen, a time picked, and the whole sync said back as one sentence.">
+      <source src="../demo/stow-demo-light.webm" type="video/webm">
+      <source src="../demo/stow-demo-light.mp4" type="video/mp4">
+    </video>
+    <video class="dark" autoplay muted loop playsinline width="1200" height="1000"
+      aria-label="Setting up a sync in Stow: two folders chosen, a time picked, and the whole sync said back as one sentence.">
+      <source src="../demo/stow-demo-dark.webm" type="video/webm">
+      <source src="../demo/stow-demo-dark.mp4" type="video/mp4">
+    </video>
+  </div>
+  <p>Stow is free for 14 days with everything working, then $39 once for a licence that covers 3 computers, Mac and Windows.</p>
+  <a class="button" href="../">Try Stow</a>
+</section>
+
+</article>
+</main>
+
+<footer>
+  <p><a href="../guides/">Guides</a> ·
+    <a href="../download/">Download</a> ·
+    <a href="https://github.com/HGWingless/stow/releases">Changelog</a> ·
+    <a href="../privacy/">Privacy</a> ·
+    <a href="../support/">Support</a></p>
+  <p>Stow uses <a href="https://rclone.org">rclone</a>, open-source software under the
+    <a href="https://github.com/rclone/rclone/blob/master/COPYING">MIT licence</a>.</p>
+  <p>© 2026 Josh Parmely</p>
+</footer>
+
+<script>
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    for (const v of document.querySelectorAll("video")) {
+      v.removeAttribute("autoplay");
+      v.pause();
+      v.controls = true;
+    }
+  }
+</script>
+</body>
+</html>

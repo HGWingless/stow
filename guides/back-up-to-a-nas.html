@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up your Mac or PC to a NAS automatically | Stow</title>
+<meta name="description" content="You have a NAS and still copy work to it by hand. How to keep it connected on a Mac or Windows 11 PC, and have your work backed up to it every day without remembering to.">
+<link rel="icon" href="../icon.png">
+<link rel="stylesheet" href="../style.css">
+<script data-goatcounter="https://stow.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="../"><img src="../icon.png" alt="" width="28" height="28">Stow</a>
+  <nav>
+    <a href="../#how">How it works</a>
+    <a href="../guides/">Guides</a>
+    <a href="../buy/">Price</a>
+    <a href="../download/">Download</a>
+    <a href="../support/">Support</a>
+  </nav>
+</header>
+
+<main class="guide">
+<article>
+
+<p class="kicker">Guide · Mac and Windows 11</p>
+<h1>Back up to your NAS every day, without remembering to</h1>
+<p class="lede">You bought a NAS so your work would be safe, and you still copy folders to it when
+  you think of it. Here's how to have your work copied there every day on its own, and to hear
+  about it when that doesn't happen.</p>
+
+<h2>First, keep the NAS connected</h2>
+<p>Stow backs up to a shared folder on the NAS that your computer is connected to. Connect it once,
+  and have your computer connect it again every time you log in. You'll need the NAS's name (or its
+  address), the name of the shared folder, and a NAS account that can write to it.</p>
+
+<h3>On a Mac</h3>
+<ol class="steps">
+  <li>In Finder, choose <strong>Go &gt; Connect to Server</strong>. Type
+    <code>smb://</code> followed by the NAS's name and the shared folder, like
+    <code>smb://mynas/Backups</code>, and click <strong>Connect</strong>.</li>
+  <li>Sign in with your NAS account, and tick <strong>Remember this password in my
+    keychain</strong>.</li>
+  <li>Open <strong>System Settings &gt; General &gt; Login Items &amp; Extensions</strong>. Under
+    <strong>Open at Login</strong>, click <strong>+</strong>, choose the shared folder (it's listed
+    with your drives), and add it.</li>
+</ol>
+
+<h3>On Windows 11</h3>
+<ol class="steps">
+  <li>In File Explorer, click <strong>This PC</strong>, then <strong>&hellip;</strong> in the bar at
+    the top, then <strong>Map network drive</strong>.</li>
+  <li>Pick a letter, and under <strong>Folder</strong> type two backslashes, the NAS's name and the
+    shared folder, like <code>\\mynas\Backups</code>. Tick <strong>Reconnect at sign-in</strong> and
+    click <strong>Finish</strong>.</li>
+  <li>Sign in with your NAS account, and tick <strong>Remember my credentials</strong>.</li>
+</ol>
+
+<h2>Setting it up in Stow</h2>
+<ol class="steps">
+  <li>Open <a href="../">Stow</a> and click <strong>New sync</strong>.</li>
+  <li>Under <strong>From</strong>, choose your work folder. Under <strong>To</strong>, go to the
+    shared folder on the NAS and choose (or make) a folder in it for this computer, like
+    <em>Mac backup</em>.</li>
+  <li>Choose <strong>Only ever add</strong>. New and changed files get copied, and nothing on the
+    NAS is ever removed, so clearing space on your computer never touches the backup.</li>
+  <li>Under <strong>When should it run?</strong>, choose <strong>Every day at</strong> and a time
+    your computer is usually on. If it's asleep or the NAS isn't connected then, the run happens as
+    soon as both are back.</li>
+  <li>Read the sentence at the bottom, then click <strong>Save and preview results</strong>. Stow
+    shows every file it's about to copy before anything moves. Click to run it.</li>
+  <li>When Stow offers, click <strong>Start Stow when I log in</strong>. It can only run on
+    schedule while it's running.</li>
+</ol>
+<p>The first run copies everything, and over Wi-Fi that can take hours. If you can, plug the
+  computer into the network with a cable for it. Every run after that copies only what's new or
+  changed.</p>
+
+<h2>When a backup doesn't happen</h2>
+<p>If the NAS isn't connected when a run is due, Stow doesn't run and doesn't pretend it did. The
+  sync shows <strong>Waiting for</strong> and the shared folder's name. Connect to the NAS again
+  and the run starts on its own. If a run starts and can't finish, because the NAS is full or a
+  folder couldn't be read, Stow says so and why.</p>
+
+<h2>Things worth knowing</h2>
+<ul>
+  <li><strong>Edited files replace their old copy, but the old copy is kept.</strong> The older
+    version goes into a safety net on the NAS for 30 days, and you can put it back from inside
+    Stow.</li>
+  <li><strong>A changed file is copied whole.</strong> Re-export a 20 GB video and all 20 GB goes
+    over the network again. Stow doesn't copy only the changed parts of a file.</li>
+  <li><strong>A NAS at home is still at home.</strong> A fire or a theft can take the NAS and the
+    computer together. Keep a second copy somewhere else, like a drive you keep at work.</li>
+  <li><strong>Check that it opens.</strong> Every so often, open a few files straight from the NAS.
+    A backup you've never opened is a guess.</li>
+</ul>
+
+<section class="try">
+  <h2>Set it up once</h2>
+  <div class="shot demo">
+    <video class="light" autoplay muted loop playsinline width="1200" height="1000"
+      aria-label="Setting up a sync in Stow: two folders chosen, a time picked, and the whole sync said back as one sentence.">
+      <source src="../demo/stow-demo-light.webm" type="video/webm">
+      <source src="../demo/stow-demo-light.mp4" type="video/mp4">
+    </video>
+    <video class="dark" autoplay muted loop playsinline width="1200" height="1000"
+      aria-label="Setting up a sync in Stow: two folders chosen, a time picked, and the whole sync said back as one sentence.">
+      <source src="../demo/stow-demo-dark.webm" type="video/webm">
+      <source src="../demo/stow-demo-dark.mp4" type="video/mp4">
+    </video>
+  </div>
+  <p>Stow is free for 14 days with everything working, then $39 once for a licence that covers 3 computers, Mac and Windows.</p>
+  <a class="button" href="../">Try Stow</a>
+</section>
+
+</article>
+</main>
+
+<footer>
+  <p><a href="../guides/">Guides</a> ·
+    <a href="../download/">Download</a> ·
+    <a href="https://github.com/HGWingless/stow/releases">Changelog</a> ·
+    <a href="../privacy/">Privacy</a> ·
+    <a href="../support/">Support</a></p>
+  <p>Stow uses <a href="https://rclone.org">rclone</a>, open-source software under the
+    <a href="https://github.com/rclone/rclone/blob/master/COPYING">MIT licence</a>.</p>
+  <p>© 2026 Josh Parmely</p>
+</footer>
+
+<script>
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    for (const v of document.querySelectorAll("video")) {
+      v.removeAttribute("autoplay");
+      v.pause();
+      v.controls = true;
+    }
+  }
+</script>
+</body>
+</html>
