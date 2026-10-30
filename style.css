@@ -70,6 +70,10 @@ a:hover { color: var(--accent-hover); }
   font-size: 19px;
   text-decoration: none;
 }
+/* SPL-136: the trademark sign, small and raised, so it doesn't shout in headings or the wordmark. */
+.tm { font-size: 0.5em; vertical-align: super; line-height: 0; font-weight: 400; }
+/* In the flex wordmark the sign is its own flex item: cancel the gap and raise it by hand. */
+.brand .tm { margin-left: -10px; position: relative; top: -0.5em; }
 .top nav { display: flex; gap: 20px; font-size: 15px; }
 .top nav a { color: var(--muted); text-decoration: none; }
 .top nav a:hover { color: var(--text); }
