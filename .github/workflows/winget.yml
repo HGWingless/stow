@@ -1,0 +1,41 @@
+# SPL-139. Files the winget-pkgs update for every Stow release, so `winget upgrade` finds it.
+#
+# Only works once WinglessEnterprises.Stow is already in microsoft/winget-pkgs: the action copies
+# the newest version there and swaps in the new installer, URL and hash. The first submission
+# (0.1.3) is made by hand.
+#
+# Needs, on the account that owns the winget-pkgs fork (HGWingless):
+#   - a fork of microsoft/winget-pkgs
+#   - a classic personal access token with `public_repo` (and `workflow`, so the action can sync
+#     the fork), saved in this repository as the secret WINGET_TOKEN
+#
+# `released` fires for a published, non-prerelease release. feed-v0 (the updater feed) is a
+# release too and holds no installer, so only tags that look like v1.2.3 go through.
+name: Publish to winget
+
+on:
+  release:
+    types: [released]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag to publish, for example v0.1.4
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  winget:
+    runs-on: ubuntu-latest
+    if: >-
+      (github.event_name == 'release' && startsWith(github.event.release.tag_name, 'v')) ||
+      github.event_name == 'workflow_dispatch'
+    steps:
+      - uses: vedantmgoyal9/winget-releaser@b7370d4d152efdce803a26cc6ca9eee58cb2ad54 # v2
+        with:
+          identifier: WinglessEnterprises.Stow
+          release-tag: ${{ inputs.tag || github.event.release.tag_name }}
+          installers-regex: '_x64-setup\.exe$'
+          token: ${{ secrets.WINGET_TOKEN }}
+          fork-user: HGWingless
